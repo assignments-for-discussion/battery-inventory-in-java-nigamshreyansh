@@ -18,6 +18,14 @@ public class Main {
     assert(counts.lowCount == 2);
     assert(counts.mediumCount == 3);
     assert(counts.highCount == 1);
+    for(int i=0;i<counts.cycles.length;i++){
+      if(counts.cycles[i]<400)
+        counts.lowCount++;
+      else if(counts.cycles[i]>=400 && counts.cycles[i]<=919)
+        counts.mediumCount++;
+      else
+        counts.highCount++;
+    }
     System.out.println("Done counting :)\n");
   }
 
